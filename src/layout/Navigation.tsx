@@ -31,9 +31,6 @@ export const navData = [
 // next link
 import Link from "next/link";
 
-// next router
-import { useRouter } from "next/router";
-
 function Navigation() {
   const pathname = usePathname();
   return (

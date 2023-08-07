@@ -9,7 +9,7 @@ import TopLeftImg from "@/layout/TopLeftImg";
 // framer motion
 import { AnimatePresence, motion } from "framer-motion";
 //
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import Transition from "@/layout/Transition";
 //
 const inter = Inter({ subsets: ["latin"] });
@@ -24,7 +24,9 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const router = useRouter();
+  const pathName = usePathname();
+  console.log(pathName);
+  console.log("rander layout");
   return (
     <html lang="en">
       <body
@@ -34,7 +36,7 @@ export default function RootLayout({
         <Navigation />
         <Header />
         <AnimatePresence mode="wait">
-          <motion.div className="h-full">
+          <motion.div key={123} className="h-full">
             <Transition />
             {children}
           </motion.div>
