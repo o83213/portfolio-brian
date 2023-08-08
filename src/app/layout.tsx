@@ -6,12 +6,10 @@ import { Inter } from "next/font/google";
 import Navigation from "@/layout/Navigation";
 import Header from "@/layout/Header";
 import TopLeftImg from "@/layout/TopLeftImg";
-// framer motion
-import { AnimatePresence, motion } from "framer-motion";
 //
 import { useRouter, usePathname } from "next/navigation";
-import Transition from "@/layout/Transition";
 //
+import AnimationWrapper from "@/layout/AnimationWrapper";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -35,12 +33,7 @@ export default function RootLayout({
         <TopLeftImg />
         <Navigation />
         <Header />
-        <AnimatePresence mode="wait">
-          <motion.div key={123} className="h-full">
-            <Transition />
-            {children}
-          </motion.div>
-        </AnimatePresence>
+        <AnimationWrapper>{children}</AnimationWrapper>
       </body>
     </html>
   );
