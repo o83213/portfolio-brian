@@ -9,7 +9,6 @@ import TopLeftImg from "@/layout/TopLeftImg";
 //
 import { useRouter, usePathname } from "next/navigation";
 //
-import AnimationWrapper from "@/layout/AnimationWrapper";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -22,18 +21,15 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const pathName = usePathname();
-  console.log(pathName);
-  console.log("rander layout");
   return (
     <html lang="en">
       <body
-        className={`${inter.className} page bg-site text-white bg-cover bg-no-repeat relative`}
+        className={`${inter.className} bg-site text-white bg-cover bg-no-repeat relative`}
       >
         <TopLeftImg />
         <Navigation />
         <Header />
-        <AnimationWrapper>{children}</AnimationWrapper>
+        {children}
       </body>
     </html>
   );
