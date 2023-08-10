@@ -15,9 +15,8 @@ function Page() {
       <div className="h-full bg-primary/30 py-36 flex items-center">
         <Circles />
         <div className="container mx-auto">
-          <div className="flex flex-col xl:flex-row gap-x-8">
-            {/* text */}
-            <div className="text-center flex xl:w-[30vw] flex-col lg:text-left mb-4 xl:mb-0">
+          {/* text */}
+          {/* <div className="text-center flex xl:w-[30vw] flex-col lg:text-left mb-4 xl:mb-0">
               <motion.h2
                 variants={fadeIn("up", 0.2)}
                 initial="hidden"
@@ -37,19 +36,18 @@ function Page() {
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. A
                 eveniet dignissimos distinctio tempore harum laudantium.
               </motion.p>
-            </div>
+            </div> */}
 
-            {/* slider */}
-            <motion.div
-              variants={fadeIn("down", 0.6)}
-              initial="hidden"
-              animate="show"
-              exit="hidden"
-              className="w-full xl:max-w-[65%]"
-            >
-              <WorkSlider />
-            </motion.div>
-          </div>
+          {/* slider */}
+          <motion.div
+            variants={fadeIn("down", 0.6)}
+            initial="hidden"
+            animate="show"
+            exit="hidden"
+            className="w-full xl:max-w-[65%]"
+          >
+            <WorkSlider />
+          </motion.div>
         </div>
         <Bulb />
       </div>

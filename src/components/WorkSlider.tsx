@@ -1,115 +1,92 @@
+import LiveProjectPop from "./LiveProjectPop";
 // work slider data
-export const workSlider = {
-  slides: [
-    {
-      images: [
-        {
-          title: 'title',
-          path: '/thumb1.jpg',
-        },
-        {
-          title: 'title',
-          path: '/thumb2.jpg',
-        },
-        {
-          title: 'title',
-          path: '/thumb3.jpg',
-        },
-        {
-          title: 'title',
-          path: '/thumb4.jpg',
-        },
-      ],
-    },
-    {
-      images: [
-        {
-          title: 'title',
-          path: '/thumb4.jpg',
-        },
-        {
-          title: 'title',
-          path: '/thumb1.jpg',
-        },
-        {
-          title: 'title',
-          path: '/thumb2.jpg',
-        },
-        {
-          title: 'title',
-          path: '/thumb3.jpg',
-        },
-      ],
-    },
-  ],
-};
+export const workSliders = [
+  {
+    id: "1",
+    image: "/thumb1.jpg",
+    title: "Cat Book",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+  },
+  {
+    id: "2",
+    image: "/thumb2.jpg",
+    title: "PDF Editor",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+  },
+  {
+    id: "3",
+    image: "/thumb3.jpg",
+    title: "Rich Text Editor",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+  }
+];
 
 // import swiper react components
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide } from "swiper/react";
 
 // import swiper styles
-import 'swiper/css';
-import 'swiper/css/free-mode';
-import 'swiper/css/pagination';
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/pagination";
 
 // import required modules
-import { Pagination } from 'swiper';
-
-// icons
-import { BsArrowRight } from 'react-icons/bs';
+import { Pagination } from "swiper";
 // next image
-import Image from 'next/image';
-
-function WorkSlider(){
+import Image from "next/image";
+// framer motion
+import { motion } from "framer-motion";
+import { fadeIn } from "@/constants/variants";
+function WorkSlider() {
   return (
     <Swiper
       spaceBetween={10}
       pagination={{
-        clickable: true,
+        clickable: true
       }}
       modules={[Pagination]}
-      className='h-[280px] sm:h-[480px]'
+      className="h-[280px] sm:h-[480px]"
     >
-      {workSlider.slides.map((slide, index) => {
+      {workSliders.map((slide, index) => {
         return (
-          <SwiperSlide key={index}>
-            <div className='grid grid-cols-2 grid-rows-2 gap-4 cursor-pointer'>
-              {slide.images.map((image, index) => {
-                return (
-                  <div
-                    className='relative rounded-lg overflow-hidden flex items-center justify-center group'
-                    key={index}
-                  >
-                    <div className='flex items-center justify-center relative overflow-hidden group'>
-                      {/* image */}
-                      <Image src={image.path} width={500} height={300} alt='' />
-                      {/* overlay gradient */}
-                      <div className='absolute inset-0 bg-gradient-to-l from-transparent via-[#e838cc] to-[#4a22bd] opacity-0 group-hover:opacity-80 transition-all duration-700'></div>
-                      {/* title */}
-                      <div className='absolute bottom-0 translate-y-full group-hover:-translate-y-10 group-hover:xl:-translate-y-20 transition-all duration-300'>
-                        <div className='flex items-center gap-x-2 text-[13px] tracking-[0.2em]'>
-                          {/* title part 1 */}
-                          <div className='delay-100'>LIVE</div>
-                          {/* title part 2 */}
-                          <div className='translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-150'>
-                            PROJECT
-                          </div>
-                          {/* icon */}
-                          <div className='text-xl translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-200'>
-                            <BsArrowRight />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                );
-              })}
+          <SwiperSlide key={slide.id}>
+            <div className="grid grid-cols-2 grid-rows-1 gap-4 cursor-pointer">
+              <div className="text-center flex xl:w-[30vw] flex-col lg:text-left mb-4 xl:mb-0">
+                <motion.h2
+                  variants={fadeIn("up", 0.2)}
+                  initial="hidden"
+                  animate="show"
+                  exit="hidden"
+                  className="h2 xl:mt-12"
+                >
+                  {slide.title}
+                </motion.h2>
+                <motion.p
+                  variants={fadeIn("up", 0.4)}
+                  initial="hidden"
+                  animate="show"
+                  exit="hidden"
+                  className="mb-4 max-w-[400px] mx-auto lg:mx-0"
+                >
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. A
+                  eveniet dignissimos distinctio tempore harum laudantium.
+                </motion.p>
+              </div>
+              <div
+                className="relative rounded-lg overflow-hidden flex items-center justify-center group"
+                key={index}
+              >
+                <div className="flex items-center justify-center relative overflow-hidden group">
+                  {/* image */}
+                  <Image src={slide.image} width={500} height={300} alt="" />
+                  <LiveProjectPop />
+                </div>
+              </div>
             </div>
           </SwiperSlide>
         );
       })}
     </Swiper>
   );
-};
+}
 
 export default WorkSlider;
