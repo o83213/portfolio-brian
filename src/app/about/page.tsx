@@ -28,7 +28,7 @@ export const aboutData: Array<{
   }>;
 }> = [
   {
-    title: "skills",
+    title: "Skill Sets",
     info: [
       {
         title: "Web Development",
@@ -53,20 +53,7 @@ export const aboutData: Array<{
     ]
   },
   {
-    title: "awards",
-    info: [
-      {
-        title: "Webby Awards - Honoree",
-        stage: "2011 - 2012"
-      },
-      {
-        title: "Adobe Design Achievement Awards - Finalist",
-        stage: "2009 - 2010"
-      }
-    ]
-  },
-  {
-    title: "experience",
+    title: "Experience",
     info: [
       {
         title: "UX/UI Designer - XYZ Company",
@@ -79,23 +66,6 @@ export const aboutData: Array<{
       {
         title: "Intern - DEF Corporation",
         stage: "2008 - 2010"
-      }
-    ]
-  },
-  {
-    title: "credentials",
-    info: [
-      {
-        title: "Web Development - ABC University, LA, CA",
-        stage: "2011"
-      },
-      {
-        title: "Computer Science Diploma - AV Technical Institute",
-        stage: "2009"
-      },
-      {
-        title: "Certified Graphic Designer - ABC Institute, Los Angeles, CA",
-        stage: "2006"
       }
     ]
   }

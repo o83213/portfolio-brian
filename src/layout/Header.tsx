@@ -1,9 +1,5 @@
-// next image
-import Image from "next/image";
-
 // next link
 import Link from "next/link";
-
 // components
 import Socials from "./Socials";
 
@@ -13,13 +9,10 @@ const Header = () => {
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row justify-between items-center gap-y-6 py-8">
           <Link href={"/"}>
-            <Image
-              src={"/logo.svg"}
-              width={220}
-              height={48}
-              alt=""
-              priority={true}
-            />
+            <div className="text-3xl relative ">
+              <span className="font-bold">Brian</span> <span>Dev</span>
+              <div className="absolute bottom-1 -right-2 w-1.5 h-1.5 rounded-full bg-red-700" />
+            </div>
           </Link>
           <Socials />
         </div>

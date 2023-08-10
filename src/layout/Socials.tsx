@@ -1,37 +1,39 @@
 // links
 import Link from "next/link";
-
 // icons
 import {
-  RiYoutubeLine,
-  RiInstagramLine,
   RiFacebookLine,
-  RiDribbbleLine,
-  RiBehanceLine,
+  RiLinkedinLine,
+  RiGithubLine,
   RiPinterestLine
 } from "react-icons/ri";
 
+const links = [
+  {
+    title: "linkedIn",
+    path: "https://www.linkedin.com/in/3806b8111/",
+    icon: <RiLinkedinLine />
+  },
+  {
+    title: "github",
+    path: "https://github.com/o83213",
+    icon: <RiGithubLine />
+  }
+];
+
 const Socials = () => {
   return (
-    <div className="flex items-center gap-x-5 text-lg">
-      <Link href={""} className="hover:text-accent transition-all duration-300">
-        <RiYoutubeLine />
-      </Link>
-      <Link href={""} className="hover:text-accent transition-all duration-300">
-        <RiFacebookLine />
-      </Link>
-      <Link href={""} className="hover:text-accent transition-all duration-300">
-        <RiInstagramLine />
-      </Link>
-      <Link href={""} className="hover:text-accent transition-all duration-300">
-        <RiDribbbleLine />
-      </Link>
-      <Link href={""} className="hover:text-accent transition-all duration-300">
-        <RiBehanceLine />
-      </Link>
-      <Link href={""} className="hover:text-accent transition-all duration-300">
-        <RiPinterestLine />
-      </Link>
+    <div className="flex items-center gap-x-6 text-lg">
+      {links.map((link) => (
+        <Link
+          key={link.title}
+          href={link.path}
+          target={"_blank"}
+          className="text-xl hover:text-accent hover:scale-125 transition-all duration-300"
+        >
+          {link.icon}
+        </Link>
+      ))}
     </div>
   );
 };

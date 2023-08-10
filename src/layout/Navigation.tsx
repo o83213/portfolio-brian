@@ -1,26 +1,19 @@
 "use client";
 import { usePathname } from "next/navigation";
 // icons
-import {
-  HiHome,
-  HiUser,
-  HiViewColumns,
-  HiRectangleGroup,
-  HiChatBubbleBottomCenterText,
-  HiEnvelope
-} from "react-icons/hi2";
+import { HiHome, HiUser, HiViewColumns, HiEnvelope } from "react-icons/hi2";
 import { motion } from "framer-motion";
 // nav data
 export const links = [
   { name: "home", path: "/", icon: <HiHome /> },
   { name: "about", path: "/about", icon: <HiUser /> },
-  { name: "services", path: "/services", icon: <HiRectangleGroup /> },
+  // { name: "services", path: "/services", icon: <HiRectangleGroup /> },
   { name: "work", path: "/work", icon: <HiViewColumns /> },
-  {
-    name: "testimonials",
-    path: "/testimonials",
-    icon: <HiChatBubbleBottomCenterText />
-  },
+  // {
+  //   name: "testimonials",
+  //   path: "/testimonials",
+  //   icon: <HiChatBubbleBottomCenterText />
+  // },
   {
     name: "contact",
     path: "/contact",
@@ -52,14 +45,14 @@ function Navigation() {
             >
               <motion.div whileHover={{ scale: 1.1 }}>
                 {/* tooltip */}
-                {/* <div className="absolute pr-14 right-0 hidden xl:group-hover:flex">
+                <div className="absolute pr-14 right-0 hidden xl:group-hover:flex">
                   <div className="bg-white relative flex text-primary items-center p-[6px] rounded-[3px]">
                     <div className="text-[12px] leading-none font-semibold capitalize">
                       {link.name}
                     </div>
                     <div className="border-solid border-l-white border-l-8 border-y-transparent border-y-[6px] border-r-0 absolute -right-2"></div>
                   </div>
-                </div> */}
+                </div>
                 {/* icon */}
                 <div>{link.icon}</div>
               </motion.div>
