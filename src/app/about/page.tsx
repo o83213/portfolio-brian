@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from "react";
-
 // icons
 import {
   FaHtml5,
@@ -18,8 +17,19 @@ import {
   SiAdobephotoshop
 } from "react-icons/si";
 
+// components
+import Avatar from "../../components/Avatar";
+import Circles from "../../components/Circles";
+
+// framer motion
+import { motion } from "framer-motion";
+import { fadeIn } from "@/constants/variants";
+
+// counter
+import CountUp from "react-countup";
+import AnimationWrapper from "@/components/AnimationWrapper";
 //  about data
-export const aboutData: Array<{
+const aboutData: Array<{
   title: string;
   info: Array<{
     title: string;
@@ -70,19 +80,7 @@ export const aboutData: Array<{
     ]
   }
 ];
-
-// components
-import Avatar from "../../components/Avatar";
-import Circles from "../../components/Circles";
-
-// framer motion
-import { motion } from "framer-motion";
-import { fadeIn } from "@/constants/variants";
-
-// counter
-import CountUp from "react-countup";
-import AnimationWrapper from "@/components/AnimationWrapper";
-
+//
 export default function Page() {
   const [index, setIndex] = useState(0);
   return (
