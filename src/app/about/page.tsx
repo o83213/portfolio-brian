@@ -26,7 +26,6 @@ import { motion } from "framer-motion";
 import { fadeIn } from "@/constants/variants";
 
 // counter
-import CountUp from "react-countup";
 import AnimationWrapper from "@/components/AnimationWrapper";
 //  about data
 const aboutData: Array<{
@@ -105,8 +104,10 @@ export default function Page() {
               exit="hidden"
               className="h2"
             >
-              Captivating <span className="text-accent">stories</span> birth
-              magnificent designs.
+              {"Developer with "}
+              <span className="text-accent">passion</span>
+              {" and "}
+              <span className="text-accent">talent</span>
             </motion.h2>
             <motion.p
               variants={fadeIn("right", 0.4)}
@@ -116,10 +117,14 @@ export default function Page() {
               className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0"
             >
               {
-                "10 years ago, I began freelancing as a developer. Since then, I've done remote work for agencies, counsulted for startups, and collaborated on digital products for business and consumer use."
+                "I'm currently a front-end software developer with 2 years of hands-on experience."
+              }
+              <br />
+              {
+                "I am also a self-taught and motivated person who is fascinated by up-to-date technology and lower-detail background knowledge of web-developing."
               }
             </motion.p>
-            <motion.div
+            {/* <motion.div
               variants={fadeIn("right", 0.6)}
               initial="hidden"
               animate="show"
@@ -160,7 +165,7 @@ export default function Page() {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </motion.div> */}
           </div>
           <motion.div
             variants={fadeIn("left", 0.4)}

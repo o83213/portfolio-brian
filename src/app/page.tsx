@@ -28,9 +28,9 @@ export default function Home() {
               exit="hidden"
               className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16"
             >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
-              nostrum quam reprehenderit vero, tenetur voluptatem nulla aut
-              aspernatur dolores ut.
+              {
+                "Hello, I'm Brian, a passionate software developer. I am going to transform your great idea into an elegant, eye-catching, and efficient web app!"
+              }
             </motion.p>
             <div className="flex justify-center xl:hidden relative">
               <ProjectsBtn />
