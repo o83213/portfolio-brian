@@ -2,32 +2,29 @@
 import React, { useState } from "react";
 // icons
 import {
-  FaHtml5,
-  FaCss3,
-  FaJs,
-  FaReact,
-  FaWordpress,
-  FaFigma
-} from "react-icons/fa";
-
-import {
+  SiHtml5,
+  SiCss3,
+  SiReact,
+  SiNodedotjs,
   SiNextdotjs,
-  SiFramer,
-  SiAdobexd,
-  SiAdobephotoshop
+  SiExpress,
+  SiTypescript,
+  SiJavascript,
+  SiGraphql,
+  SiApollographql,
+  SiPostgresql,
+  SiPrisma,
+  SiLinux
 } from "react-icons/si";
-
 // components
 import Avatar from "../../components/Avatar";
 import Circles from "../../components/Circles";
-
 // framer motion
 import { motion } from "framer-motion";
 import { fadeIn } from "@/constants/variants";
-
 // counter
 import AnimationWrapper from "@/components/AnimationWrapper";
-//  about data
+// about data
 const aboutData: Array<{
   title: string;
   info: Array<{
@@ -40,23 +37,31 @@ const aboutData: Array<{
     title: "Skill Sets",
     info: [
       {
-        title: "Web Development",
+        title: "Front-End Development",
         icons: [
-          <FaHtml5 key={1} />,
-          <FaCss3 key={2} />,
-          <FaJs key={3} />,
-          <FaReact key={4} />,
-          <SiNextdotjs key={5} />,
-          <SiFramer key={6} />,
-          <FaWordpress key={7} />
+          <SiHtml5 key={1} />,
+          <SiCss3 key={2} />,
+          <SiJavascript key={3} />,
+          <SiTypescript key={4} />,
+          <SiReact key={5} />,
+          <SiNextdotjs key={6} />
         ]
       },
       {
-        title: "UI/UX Design",
+        title: "Back-End Development",
         icons: [
-          <FaFigma key={1} />,
-          <SiAdobexd key={2} />,
-          <SiAdobephotoshop key={3} />
+          <SiNodedotjs key={1} />,
+          <SiExpress key={2} />,
+          <SiGraphql key={3} />,
+          <SiApollographql key={4} />
+        ]
+      },
+      {
+        title: "Other Skills",
+        icons: [
+          <SiPostgresql key={1} />,
+          <SiPrisma key={2} />,
+          <SiLinux key={3} />
         ]
       }
     ]
@@ -65,16 +70,12 @@ const aboutData: Array<{
     title: "Experience",
     info: [
       {
-        title: "UX/UI Designer - XYZ Company",
-        stage: "2012 - 2023"
+        title: "Front-End Developer - Lion Travel",
+        stage: "2022 - 2023"
       },
       {
-        title: "Web Developer - ABC Agency",
-        stage: "2010 - 2012"
-      },
-      {
-        title: "Intern - DEF Corporation",
-        stage: "2008 - 2010"
+        title: "Mechanical Engineer - Lagis",
+        stage: "2020 - 2021"
       }
     ]
   }

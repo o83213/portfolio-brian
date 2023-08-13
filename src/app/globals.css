@@ -9,6 +9,7 @@
 .swiper-pagination-horizontal.swiper-pagination-bullets
   .swiper-pagination-bullet {
   background-color: #f13024;
+  scale: 1.2;
 }
 
 .swiper-button-next:after,
