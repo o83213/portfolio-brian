@@ -22,14 +22,14 @@ interface Props {
 
 function Projectcard({ data }: Props) {
   return (
-    <div className="grid grid-cols-2 grid-rows-1 gap-4 cursor-pointer  w-full h-4/5">
+    <div className="grid grid-cols-2 grid-rows-1 gap-4 w-full h-4/5">
       <div>
         <motion.h2
           variants={fadeIn("up", 0.2)}
           initial="hidden"
           animate="show"
           exit="hidden"
-          className="h2 xl:mt-12"
+          className="h2 xl:mt-6"
         >
           {data.title}
         </motion.h2>

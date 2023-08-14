@@ -42,6 +42,7 @@ function Navigation() {
               } relative flex items-center group hover:text-accent transition-all duration-300`}
               href={link.path}
               key={index}
+              prefetch={true}
             >
               <motion.div whileHover={{ scale: 1.1 }}>
                 {/* tooltip */}

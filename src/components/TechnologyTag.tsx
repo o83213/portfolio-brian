@@ -4,7 +4,7 @@ interface Props {
   technologyFeatures: string[];
 }
 
-function Technology_tag({ technologyFeatures }: Props) {
+function TechnologyTag({ technologyFeatures }: Props) {
   return (
     <div className="w-full h-auto flex flex-row items-center flex-wrap mt-[10px] ">
       <div
@@ -31,12 +31,11 @@ function Technology_tag({ technologyFeatures }: Props) {
 
       <div
         className={`tag ${
-          technologyFeatures.includes("tailwind") ? "" : " hidden"
+          technologyFeatures.includes("pdflib") ? "" : " hidden"
         } bg-[#4ad7f0]    text-[#258899] px-[13px] rounded-lg mb-[10px] mr-[10px]`}
       >
-        Tailwind
+        Pdf-lib
       </div>
-
       <div
         className={`tag ${
           technologyFeatures.includes("react") ? "" : " hidden"
@@ -52,28 +51,19 @@ function Technology_tag({ technologyFeatures }: Props) {
       >
         React Native
       </div>
-
       <div
         className={`tag ${
-          technologyFeatures.includes("tauri") ? "" : " hidden"
-        } bg-[#FFC131]    text-[#44a1ab] px-[13px] rounded-lg mb-[10px] mr-[10px]`}
-      >
-        Tauri
-      </div>
-
-      <div
-        className={`tag ${
-          technologyFeatures.includes("redux") ? "" : " hidden"
+          technologyFeatures.includes("slatejs") ? "" : " hidden"
         }  bg-[#764ABC]    text-white px-[13px] rounded-lg mb-[10px] mr-[10px]`}
       >
-        Redux
+        SlateJs
       </div>
       <div
         className={`tag ${
-          technologyFeatures.includes("reactquery") ? "" : " hidden"
+          technologyFeatures.includes("reactdraggable") ? "" : " hidden"
         }  bg-[#FF4154]    text-white px-[13px] rounded-lg mb-[10px] mr-[10px]`}
       >
-        ReactQuery
+        React-draggable
       </div>
 
       <div
@@ -99,10 +89,10 @@ function Technology_tag({ technologyFeatures }: Props) {
       </div>
       <div
         className={`tag ${
-          technologyFeatures.includes("golang") ? "" : " hidden"
+          technologyFeatures.includes("pdfjsdist") ? "" : " hidden"
         }  bg-[#00ACD7]    text-[#fdfdfd] px-[13px] rounded-lg mb-[10px] mr-[10px]`}
       >
-        Go
+        Pdfjs-dist
       </div>
       <div
         className={`tag ${
@@ -159,7 +149,7 @@ function Technology_tag({ technologyFeatures }: Props) {
           technologyFeatures.includes("graphql") ? "" : " hidden"
         }   bg-[#E632AD]     text-[#fdfdfd] px-[13px] rounded-lg mb-[10px] mr-[10px]`}
       >
-        Graphql
+        GraphQL
       </div>
       <div
         id="cursive"
@@ -180,27 +170,13 @@ function Technology_tag({ technologyFeatures }: Props) {
       </div>
       <div
         className={`tag ${
-          technologyFeatures.includes("docker") ? "" : " hidden"
-        }  bg-[#2496ED]    text-[#fdfdfd]  px-[13px] rounded-lg mb-[10px] mr-[10px]`}
+          technologyFeatures.includes("webpack") ? "" : " hidden"
+        }  bg-[#0090D1]    text-[#fdfdfd] px-[13px] rounded-lg mb-[10px] mr-[10px]`}
       >
-        Docker
-      </div>
-      <div
-        className={`tag ${
-          technologyFeatures.includes("stripe") ? "" : " hidden"
-        }  bg-[#665BFF]    text-[#fdfdfd]  px-[13px] rounded-lg mb-[10px] mr-[10px]`}
-      >
-        Stripe
-      </div>
-      <div
-        className={`tag ${
-          technologyFeatures.includes("expo") ? "" : " hidden"
-        }  bg-[#422EDF]  text-[#fdfdfd]  px-[13px] rounded-lg mb-[10px] mr-[10px]`}
-      >
-        Expo
+        Webpack
       </div>
     </div>
   );
 }
 
-export default Technology_tag;
+export default TechnologyTag;

@@ -3,9 +3,10 @@ import LiveProjectPop from "./LiveProjectPop";
 export const workSliders = [
   {
     id: "1",
-    image: "/thumb1.jpg",
+    image: "/catbook.jpg",
     title: "Cat Book",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    description:
+      "This is a social media app clone with the Next front-end, GraphQL and Web-Socket server, and PostgreSQL database. There are the several main features in this project: Writing Post, Deleting their own post, Leaving common, Liking the post, Adding friends, Have live conversation.",
     url: "https://google.com",
     codeStack: [
       "typescript",
@@ -15,17 +16,19 @@ export const workSliders = [
       "expressjs",
       "graphql",
       "postgresql",
-      "prisma"
+      "prisma",
+      "jwt"
     ]
   },
   {
     id: "2",
     image: "/thumb2.jpg",
     title: "PDF Editor",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    description:
+      "This is a PDF Editor with the Next front-end, Node back-end, and MongoDB database. The user can upload their pdf file and add block to writing their signature and typing the text. After that, they can download the modified version pdf file!",
     url: "https://google.com",
     codeStack: [
-      "typescript",
+      "javascript",
       "react",
       "nextjs",
       "pdfjsdist",
@@ -38,11 +41,12 @@ export const workSliders = [
   },
   {
     id: "3",
-    image: "/thumb3.jpg",
+    image: "/richTextEditor.png",
     title: "Rich Text Editor",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    description:
+      "This is a rich text editor create with SlateJs library. The user can write the text in bold, italic, ...etc and add online picture, link, and code block. After that, you can output the html into serialized string format!",
     url: "https://google.com",
-    codeStack: ["typescript", "react", "nextjs", "slatejs"]
+    codeStack: ["typescript", "react", "nextjs", "slatejs", "webpack"]
   }
 ];
 
