@@ -24,14 +24,14 @@ interface Props {
 
 function Projectcard({ data }: Props) {
   return (
-    <div className="grid grid-cols-2 grid-rows-1 gap-4 w-full h-4/5">
+    <div className="grid grid-cols-1 xl:grid-cols-2 grid-rows-[1fr_2fr] xl:grid-rows-1 justify-items-center gap-4 w-full h-full  px-8 pb-8">
       <div>
         <motion.h2
           variants={fadeIn("up", 0.2)}
           initial="hidden"
           animate="show"
           exit="hidden"
-          className="h2 xl:mt-6"
+          className="h2 text-center xl:text-left"
         >
           {data.title}
         </motion.h2>
@@ -40,7 +40,7 @@ function Projectcard({ data }: Props) {
           initial="hidden"
           animate="show"
           exit="hidden"
-          className="mb-4 max-w-[400px] mx-auto lg:mx-0"
+          className="mx-auto lg:mx-0"
         >
           {data.description}
         </motion.p>
@@ -49,7 +49,7 @@ function Projectcard({ data }: Props) {
           initial="hidden"
           animate="show"
           exit="hidden"
-          className="mb-4 max-w-[400px] mx-auto lg:mx-0"
+          className="mb-4 mx-auto lg:mx-0 hidden xl:block"
         >
           <TechnologyTag technologyFeatures={data.codeStack} />
           <Link
@@ -65,7 +65,7 @@ function Projectcard({ data }: Props) {
       <Link
         href={data.url}
         target={"_blank"}
-        className="relative rounded-lg overflow-hidden flex items-center justify-center group"
+        className="relative rounded-lg overflow-hidden flex  items-center group w-4/5 xl:w-full xl:h-full"
       >
         <Image src={data.image} fill alt="" />
         <LiveProjectPop />

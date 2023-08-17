@@ -14,7 +14,7 @@ function Page() {
     <AnimationWrapper>
       <div className="h-full bg-primary/30 py-36 flex items-center ">
         <Circles />
-        <div className="container mx-auto h-full ">
+        <div className="container mx-auto">
           <motion.div
             variants={fadeIn("down", 0.6)}
             initial="hidden"

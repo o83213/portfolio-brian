@@ -55,6 +55,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // import swiper styles
 import "swiper/css";
 import "swiper/css/free-mode";
+import "swiper/css/navigation";
 import "swiper/css/pagination";
 // import required modules
 import { Pagination, Navigation, Mousewheel } from "swiper";
@@ -69,7 +70,7 @@ function WorkSlider() {
       mousewheel={true}
       loop={true}
       modules={[Pagination, Navigation, Mousewheel]}
-      className="h-[280px] sm:h-[480px]"
+      className="h-[65vh] sm:h-[480px]"
     >
       {workSliders.map((slide) => {
         return (
