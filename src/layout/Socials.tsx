@@ -1,12 +1,7 @@
 // links
 import Link from "next/link";
 // icons
-import {
-  RiFacebookLine,
-  RiLinkedinLine,
-  RiGithubLine,
-  RiPinterestLine
-} from "react-icons/ri";
+import { RiLinkedinLine, RiGithubLine } from "react-icons/ri";
 
 const links = [
   {

@@ -15,11 +15,3 @@ export default function AnimationWrapper({
     </motion.main>
   );
 }
-// export default function AnimationWrapper({
-//   children
-// }: {
-//   children: React.ReactNode;
-// }) {
-//   const pathName = usePathname();
-//   return <div className="border-yellow-400">{children}</div>;
-// }
