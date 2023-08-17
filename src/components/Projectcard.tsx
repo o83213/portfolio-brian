@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { fadeIn } from "@/app/variants";
 import LiveProjectPop from "./LiveProjectPop";
 import Link from "next/link";
+import { FaGithub } from "react-icons/fa";
 
 interface Project_data {
   id: string;
@@ -13,6 +14,7 @@ interface Project_data {
   title: string;
   description: string;
   url: string;
+  repo: string;
   codeStack: string[];
 }
 
@@ -50,6 +52,14 @@ function Projectcard({ data }: Props) {
           className="mb-4 max-w-[400px] mx-auto lg:mx-0"
         >
           <TechnologyTag technologyFeatures={data.codeStack} />
+          <Link
+            href={data.repo}
+            target={"_blank"}
+            className="inline-flex gap-2 items-center cursor-pointer bg-slate-300 px-1 py-0.5 rounded-lg ease-in duration-300 hover:bg-white "
+          >
+            <FaGithub color="#000" />
+            <span className="text-[#000] font-bold">Github</span>
+          </Link>
         </motion.p>
       </div>
       <Link
