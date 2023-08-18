@@ -44,7 +44,7 @@ function Projectcard({ data }: Props) {
         >
           {data.description}
         </motion.p>
-        <motion.p
+        <motion.div
           variants={fadeIn("up", 0.4)}
           initial="hidden"
           animate="show"
@@ -60,7 +60,7 @@ function Projectcard({ data }: Props) {
             <FaGithub color="#000" />
             <span className="text-[#000] font-bold">Github</span>
           </Link>
-        </motion.p>
+        </motion.div>
       </div>
       <Link
         href={data.url}

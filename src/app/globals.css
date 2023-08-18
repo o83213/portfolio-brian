@@ -21,7 +21,7 @@
 
 html {
   height: 100vh;
-  --swiper-navigation-sides-offset: 0;
+  --swiper-navigation-sides-offset: 0px;
 }
 
 body {
