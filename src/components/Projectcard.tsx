@@ -16,6 +16,7 @@ interface Project_data {
   url: string;
   repo: string;
   codeStack: string[];
+  blurImage: string;
 }
 
 interface Props {
@@ -67,7 +68,13 @@ function Projectcard({ data }: Props) {
         target={"_blank"}
         className="relative rounded-lg overflow-hidden flex  items-center group w-4/5 xl:w-full xl:h-full"
       >
-        <Image src={data.image} fill alt="" />
+        <Image
+          src={data.image}
+          placeholder={"empty"}
+          fill
+          alt=""
+          priority={true}
+        />
         <LiveProjectPop />
       </Link>
     </div>
