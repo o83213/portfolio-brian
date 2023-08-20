@@ -17,8 +17,9 @@ import {
   SiLinux
 } from "react-icons/si";
 // components
-import Avatar from "../../components/Avatar";
+import HomeImage from "../../components/HomeImage";
 import Circles from "../../components/Circles";
+import Avatar from "@/components/Avatar";
 // framer motion
 import { motion } from "framer-motion";
 import { fadeIn } from "@/constants/variants";
@@ -87,6 +88,7 @@ export default function Page() {
     <AnimationWrapper>
       <div className="h-full bg-primary/30 py-32 text-center xl:text-left">
         <Circles />
+        <Avatar />
         <motion.div
           variants={fadeIn("right", 0.2)}
           initial="hidden"
@@ -94,7 +96,7 @@ export default function Page() {
           exit="hidden"
           className="hidden xl:flex absolute bottom-0 -left-[370px]"
         >
-          <Avatar />
+          <HomeImage />
         </motion.div>
         <div className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6">
           <div className="flex-1 flex flex-col justify-center">

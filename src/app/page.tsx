@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { fadeIn } from "./variants";
 import Image from "next/image";
 import ProjectsBtn from "@/components/ProjectsBtn";
-import Avatar from "@/components/Avatar";
+import HomeImage from "@/components/HomeImage";
 import AnimationWrapper from "@/components/AnimationWrapper";
 export default function Home() {
   return (
@@ -56,7 +56,7 @@ export default function Home() {
             transition={{ duration: 1, ease: "easeInOut" }}
             className="w-full h-full max-w-[737px] max-h-[678px] absolute -bottom-32 lg:bottom-0 lg:right-[8%]"
           >
-            <Avatar />
+            <HomeImage />
           </motion.div>
         </div>
       </div>
