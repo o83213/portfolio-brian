@@ -73,7 +73,7 @@ function WorkSlider() {
       mousewheel={true}
       loop={true}
       modules={[Pagination, Navigation, Mousewheel]}
-      className="h-[65vh] sm:h-[480px]"
+      className="h-[65vh] sm:h-[480px] "
     >
       {workSliders.map((slide) => {
         return (

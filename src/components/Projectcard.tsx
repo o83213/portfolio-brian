@@ -25,14 +25,14 @@ interface Props {
 
 function Projectcard({ data }: Props) {
   return (
-    <div className="grid grid-cols-1 xl:grid-cols-2 grid-rows-[1fr_2fr] xl:grid-rows-1 justify-items-center gap-4 w-full h-full  px-8 pb-8">
-      <div>
+    <div className="grid grid-cols-1 xl:grid-cols-[1fr_1fr] grid-rows-2 xl:grid-rows-1 justify-items-center gap-4 w-full h-full px-8 pb-8">
+      <div className="flex flex-col gap-3 justify-center">
         <motion.h2
           variants={fadeIn("up", 0.2)}
           initial="hidden"
           animate="show"
           exit="hidden"
-          className="h2 text-center xl:text-left"
+          className="text-2xl lg:text-3xl xl:text-4xl text-center xl:text-left"
         >
           {data.title}
         </motion.h2>
@@ -41,7 +41,7 @@ function Projectcard({ data }: Props) {
           initial="hidden"
           animate="show"
           exit="hidden"
-          className="mx-auto lg:mx-0"
+          className="mx-auto text-base sm:text-lg lg:text-xl xl:text-lg lg:mx-0"
         >
           {data.description}
         </motion.p>
@@ -63,20 +63,23 @@ function Projectcard({ data }: Props) {
           </Link>
         </motion.div>
       </div>
-      <Link
-        href={data.url}
-        target={"_blank"}
-        className="relative rounded-lg overflow-hidden flex  items-center group w-4/5 xl:w-full xl:h-full"
-      >
-        <Image
-          src={data.image}
-          placeholder={"empty"}
-          fill
-          alt=""
-          priority={true}
-        />
-        <LiveProjectPop />
-      </Link>
+      <div className="flex justify-center items-center w-full ">
+        <Link
+          href={data.url}
+          target={"_blank"}
+          className="relative w-auto h-full xl:w-full xl:h-auto group aspect-video rounded-bl-3xl rounded-tr-3xl overflow-hidden"
+        >
+          <Image
+            src={data.image}
+            placeholder={"empty"}
+            fill
+            alt=""
+            style={{ objectFit: "fill" }}
+            priority={true}
+          />
+          <LiveProjectPop />
+        </Link>
+      </div>
     </div>
   );
 }
