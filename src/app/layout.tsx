@@ -20,9 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body
-        className={`${inter.className} bg-site text-white bg-cover bg-no-repeat relative`}
-      >
+      <body className={`${inter.className} bg-slate-950 text-white relative`}>
         <TopLeftImg />
         <Navigation />
         <Header />

@@ -71,12 +71,12 @@ const aboutData: Array<{
     title: "Experience",
     info: [
       {
-        title: "Front-End Developer - Lion Travel",
-        stage: "2022 - 2023"
+        title: "2022 - 2023",
+        stage: "Front-End Developer - Lion Travel"
       },
       {
-        title: "Mechanical Engineer - Lagis",
-        stage: "2020 - 2021"
+        title: "2020 - 2021",
+        stage: "Mechanical Engineer - Lagis"
       }
     ]
   }
@@ -100,18 +100,18 @@ export default function Page() {
         </motion.div>
         <div className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6">
           <div className="flex-1 flex flex-col justify-center">
-            <motion.h2
+            <motion.div
               variants={fadeIn("right", 0.2)}
               initial="hidden"
               animate="show"
               exit="hidden"
-              className="h2"
+              className="text-2xl xl:text-3xl font-bold"
             >
               {"Developer with "}
               <span className="text-accent">passion</span>
               {" and "}
               <span className="text-accent">talent</span>
-            </motion.h2>
+            </motion.div>
             <motion.p
               variants={fadeIn("right", 0.4)}
               initial="hidden"
@@ -127,48 +127,6 @@ export default function Page() {
                 "I am also a self-taught and motivated person who is fascinated by up-to-date technology and lower-detail background knowledge of web-developing."
               }
             </motion.p>
-            {/* <motion.div
-              variants={fadeIn("right", 0.6)}
-              initial="hidden"
-              animate="show"
-              exit="hidden"
-              className="hidden md:flex md:max-w-xl xl:max-w-none mx-auto xl:mx-0 mb-8"
-            >
-              <div className="flex flex-1 xl:gap-x-6">
-                <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
-                  <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                    <CountUp start={0} end={10} duration={5} /> +
-                  </div>
-                  <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
-                    Years of experience
-                  </div>
-                </div>
-                <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
-                  <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                    <CountUp start={0} end={250} duration={5} /> +
-                  </div>
-                  <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
-                    Satisfied clients
-                  </div>
-                </div>
-                <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
-                  <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                    <CountUp start={0} end={650} duration={5} /> +
-                  </div>
-                  <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
-                    Finished projects
-                  </div>
-                </div>
-                <div className="relative flex-1">
-                  <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                    <CountUp start={0} end={8} duration={5} /> +
-                  </div>
-                  <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
-                    Winning awards
-                  </div>
-                </div>
-              </div>
-            </motion.div> */}
           </div>
           <motion.div
             variants={fadeIn("left", 0.4)}
@@ -177,7 +135,7 @@ export default function Page() {
             exit="hidden"
             className="flex flex-col w-full xl:max-w-[48%] h-[480px]"
           >
-            <div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4">
+            <div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4 mt-4">
               {aboutData.map((item, itemIndex) => {
                 return (
                   <div
@@ -200,7 +158,9 @@ export default function Page() {
                     key={itemIndex}
                     className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-white/60"
                   >
-                    <div className="font-light mb-2 md:mb-0">{item.title}</div>
+                    <div className="hidden md:block font-light mb-2 md:mb-0">
+                      {item.title}
+                    </div>
                     <div className="hidden md:flex">-</div>
                     <div>{item?.stage}</div>
                     <div className="flex gap-x-4">
