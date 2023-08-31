@@ -16,7 +16,6 @@ interface Project_data {
   url: string;
   repo: string;
   codeStack: string[];
-  blurImage: string;
 }
 
 interface Props {

@@ -65,7 +65,13 @@ function TechnologyTag({ technologyFeatures }: Props) {
       >
         React-draggable
       </div>
-
+      <div
+        className={`tag ${
+          technologyFeatures.includes("tailwindcss") ? "" : " hidden"
+        }  bg-[#FF4154]    text-white px-[13px] rounded-lg mb-[10px] mr-[10px]`}
+      >
+        TailwindCss
+      </div>
       <div
         className={`tag ${
           technologyFeatures.includes("typescript") ? "" : " hidden"
@@ -96,10 +102,10 @@ function TechnologyTag({ technologyFeatures }: Props) {
       </div>
       <div
         className={`tag ${
-          technologyFeatures.includes("gin") ? "" : " hidden"
+          technologyFeatures.includes("openai") ? "" : " hidden"
         }  bg-[#0090D1]    text-[#f1db4b] px-[13px] rounded-lg mb-[10px] mr-[10px]`}
       >
-        Gin
+        OpenAI
       </div>
       <div
         className={`tag ${
@@ -118,10 +124,10 @@ function TechnologyTag({ technologyFeatures }: Props) {
       </div>
       <div
         className={`tag ${
-          technologyFeatures.includes("firebase") ? "" : " hidden"
+          technologyFeatures.includes("langchain") ? "" : " hidden"
         }  bg-[#e9b422]    text-[#fdfdfd]  px-[13px] rounded-lg mb-[10px] mr-[10px]`}
       >
-        Firebase
+        Langchain
       </div>
       <div
         className={`tag ${
@@ -132,10 +138,10 @@ function TechnologyTag({ technologyFeatures }: Props) {
       </div>
       <div
         className={`tag ${
-          technologyFeatures.includes("mysql") ? "" : " hidden"
+          technologyFeatures.includes("nextauth") ? "" : " hidden"
         }  bg-[#01526A]    text-[#fdfdfd] px-[13px] rounded-lg mb-[10px] mr-[10px] `}
       >
-        MySQL
+        NextAuth
       </div>
       <div
         className={`tag ${

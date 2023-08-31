@@ -2,12 +2,31 @@
 export const workSliders = [
   {
     id: "1",
+    image: "/gptclone.png",
+    title: "ChatGpt Clone",
+    description:
+      "This is a chat app clone with the NextJs. User will use o-auth login and send their message and get the response from the GPT model. And the response will be streamed and chat history will be saved as history for future reply!",
+    url: "https://chatgpt-brian.vercel.app",
+    repo: "https://github.com/o83213/chatgpt-clone",
+    codeStack: [
+      "typescript",
+      "nextjs",
+      "nodejs",
+      "openai",
+      "langchain",
+      "mongodb",
+      "nextauth",
+      "tailwindcss"
+    ]
+  },
+  {
+    id: "2",
     image: "/catbook.jpg",
     blurImage: "/blur-catbook.jpg",
     title: "Cat Book",
     description:
       "This is a social media app clone with the Next front-end, GraphQL and Web-Socket server, and PostgreSQL database. There are the several main features in this project: Writing Post, Deleting their own post, Leaving common, Liking the post, Adding friends, Have live conversation.",
-    url: "https://chat-project-client.vercel.app/",
+    url: "https://chat-project-client.vercel.app",
     repo: "https://github.com/o83213/catbook-fullstack",
     codeStack: [
       "typescript",
@@ -22,7 +41,7 @@ export const workSliders = [
     ]
   },
   {
-    id: "2",
+    id: "3",
     image: "/richTextEditor.png",
     blurImage: "/blur-richTextEditor.jpg",
     title: "Rich Text Editor",
@@ -33,7 +52,7 @@ export const workSliders = [
     codeStack: ["typescript", "react", "nextjs", "slatejs", "webpack"]
   },
   {
-    id: "3",
+    id: "4",
     image: "/pdf-editor.png",
     blurImage: "/blur-pdf-editor.jpg",
     title: "PDF Editor",
